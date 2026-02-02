@@ -1,0 +1,54 @@
+.top-left-text {
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  font-size: 16px;
+  opacity: 1;
+  color: #1A1B1C;
+  z-index: 100;
+}
+
+.skinstric-text {
+  font-weight: 700;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.skinstric-link {
+  text-decoration: none;
+  color: #1A1B1C;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.skinstric-link:hover {
+  /* No style change on hover, just the cursor pointer */
+}
+
+.intro-text {
+  color: #A0A4AB;
+}
+
+.header-image {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 1;
+}
+
+.start-analysis-text {
+  position: absolute;
+  width: 227px;
+  height: 24px;
+  top: 86px;
+  left: 32px;
+  opacity: 1;
+  font-family: 'Roobert TRIAL', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1A1B1C;
+  z-index: 100;
+}

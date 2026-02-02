@@ -9,41 +9,6 @@
   overflow: hidden;
 }
 
-.header-image {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  opacity: 1;
-}
-
-.top-left-text {
-  position: absolute;
-  top: 16px;
-  left: 32px;
-  font-size: 16px;
-  opacity: 1;
-  color: #1A1B1C;
-  z-index: 100;
-}
-
-.skinstric-text {
-  font-weight: 700;
-  margin-right: 12px;
-  display: inline-block;
-}
-
-.skinstric-link {
-  text-decoration: none;
-  color: #1A1B1C;
-  cursor: pointer;
-  display: inline-block;
-}
-
-
-.intro-text {
-  color: #A0A4AB;
-}
-
 .sophisticated-page {
   width: 680px;
   height: 240px;
@@ -53,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.45s ease;
+  transition: transform 0.25s ease;
 }
 
 .sophisticated-page.shift-left {
