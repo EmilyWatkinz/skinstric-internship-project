@@ -2,21 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-function Header({ showStartAnalysis = false }) {
+function Header({ showStartAnalysis = false, showAnalysis = false }) {
   return (
     <>
       <div className="top-left-text">
         <Link to="/" className="skinstric-link">
-          <span className="skinstric-text">Skinstric</span>
+          <span className="skinstric-text">SKINSTRIC</span>
         </Link>
-        <span className="intro-text">[ Intro ]</span>
+        <span className="intro-text">{showAnalysis ? '[ Analysis ]' : '[ Intro ]'}</span>
       </div>
       {showStartAnalysis && (
         <div className="start-analysis-text">
           TO START ANALYSIS
         </div>
       )}
-      <img src="/header.png" alt="Header" className="header-image" />
     </>
   );
 }

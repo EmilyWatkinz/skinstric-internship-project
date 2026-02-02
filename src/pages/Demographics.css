@@ -1,0 +1,35 @@
+@import url('https://db.onlinewebfonts.com/c/1dc90b9dd35ients90b0ab6d9c0ab51efe?family=Roobert+TRIAL');
+
+.demographics-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Roobert TRIAL', sans-serif;
+}
+
+.demographics-header {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+
+.skinstric-text {
+  font-family: 'Roobert TRIAL', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1A1B1C;
+  margin-bottom: 4px;
+}
+
+.ai-analysis-text-bold {
+  font-family: 'Roobert TRIAL', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1A1B1C;
+}

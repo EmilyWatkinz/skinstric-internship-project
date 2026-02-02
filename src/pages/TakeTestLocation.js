@@ -43,7 +43,7 @@ function TakeTestLocation() {
           src={process.env.PUBLIC_URL + "/proceed-button-icon-text-shrunk.svg"}
           alt="Proceed" 
           className="proceed-button-icon"
-          onClick={() => console.log('Proceed clicked')}
+          onClick={() => navigate('/next-step')}
         />
       )}
     </div>

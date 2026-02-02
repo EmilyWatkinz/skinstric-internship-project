@@ -1,0 +1,74 @@
+.analysis-loading-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Roobert TRIAL', sans-serif;
+  overflow: hidden;
+}
+
+.analysis-loading-page .diamond {
+  position: absolute;
+  transform: rotate(45deg);
+  border-style: dashed;
+  border-width: 2px;
+  background-color: transparent;
+}
+
+.analysis-loading-page .diamond-inner {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  border-color: #6B6B6B;
+  opacity: 1;
+  animation: rotate-diamond 80s linear infinite;
+}
+
+.analysis-loading-page .diamond-middle {
+  width: 630px;
+  height: 630px;
+  top: 50%;
+  left: 50%;
+  margin-top: -315px;
+  margin-left: -315px;
+  border-color: #A0A4AB;
+  opacity: 1;
+  animation: rotate-diamond 60s linear infinite;
+}
+
+.analysis-loading-page .diamond-outer {
+  width: 762px;
+  height: 762px;
+  top: 50%;
+  left: 50%;
+  margin-top: -381px;
+  margin-left: -381px;
+  border-color: #C5C7CB;
+  opacity: 1;
+  animation: rotate-diamond 100s linear infinite;
+}
+
+@keyframes rotate-diamond {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+.preparing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roobert TRIAL', sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1A1B1C;
+  text-align: center;
+  z-index: 10;
+  white-space: nowrap;
+}

@@ -12,6 +12,7 @@
   font-weight: 700;
   margin-right: 12px;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .skinstric-link {
