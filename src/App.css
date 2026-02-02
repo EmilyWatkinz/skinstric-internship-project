@@ -193,3 +193,22 @@
   text-transform: uppercase;
   color: #1A1B1C;
 }
+
+/* Responsive Global Styles */
+@media (max-width: 1024px) {
+  .App {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    overflow-x: hidden;
+  }
+}

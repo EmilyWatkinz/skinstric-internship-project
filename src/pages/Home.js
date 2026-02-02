@@ -13,9 +13,11 @@ function Home() {
 
   return (
     <div className="App">
-      <Header />
+      <Header showEnterCode={true} />
       <div className={`triangle triangle-left ${hoveredButton === 'right' ? 'hidden' : ''}`}></div>
       <div className={`triangle triangle-right ${hoveredButton === 'left' ? 'hidden' : ''}`}></div>
+      <div className="triangle triangle-mobile-outer"></div>
+      <div className="triangle triangle-mobile"></div>
       <div 
         className={`ai-button ${hoveredButton === 'right' ? 'hidden' : ''}`}
         onMouseEnter={() => setHoveredButton('left')}
@@ -36,9 +38,10 @@ function Home() {
         <div className={`skincare-text ${hoveredButton === 'left' ? 'slide-right' : ''} ${hoveredButton === 'right' ? 'slide-left' : ''}`}>skincare</div>
       </div>
       <div className="bottom-left-text">
-        Skinstric developed an A.I. that creates<br />
-        a highly-personalised routine tailored<br />
-        to what your skin needs.
+        Skinstric developed an A.I. that creates a highly-personalised routine tailored to what your skin needs.
+      </div>
+      <div className="mobile-enter-experience" onClick={handleTakeTestClick}>
+        <div className="mobile-enter-text">Enter Experience</div>
       </div>
     </div>
   );

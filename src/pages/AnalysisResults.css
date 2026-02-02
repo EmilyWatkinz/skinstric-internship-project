@@ -177,3 +177,117 @@
   text-transform: uppercase;
   color: #1A1B1C;
 }
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .center-diamond {
+    width: 240px;
+    height: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+  }
+  .analysis-results-page .diamond-inner {
+    width: 280px;
+    height: 280px;
+    margin-top: -140px;
+    margin-left: -140px;
+  }
+  .analysis-results-page .diamond-middle {
+    width: 360px;
+    height: 360px;
+    margin-top: -180px;
+    margin-left: -180px;
+  }
+  .analysis-results-page .diamond-outer {
+    width: 440px;
+    height: 440px;
+    margin-top: -220px;
+    margin-left: -220px;
+  }
+  .quadrant-label {
+    font-size: 10px;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .center-diamond {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+  .analysis-results-page .diamond-inner {
+    width: 240px;
+    height: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+  }
+  .analysis-results-page .diamond-middle {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .analysis-results-page .diamond-outer {
+    width: 360px;
+    height: 360px;
+    margin-top: -180px;
+    margin-left: -180px;
+  }
+  .quadrant-label {
+    font-size: 9px;
+    max-width: 80px;
+  }
+  .summary-button-icon {
+    bottom: 16px;
+    right: 16px;
+  }
+  .summary-button-icon img {
+    width: 120px;
+  }
+  .ai-analysis-text {
+    left: 16px;
+  }
+  .ai-analysis-title, .ai-analysis-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-diamond {
+    width: 160px;
+    height: 160px;
+    margin-top: -80px;
+    margin-left: -80px;
+  }
+  .analysis-results-page .diamond-inner {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+  .analysis-results-page .diamond-middle {
+    width: 240px;
+    height: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+  }
+  .analysis-results-page .diamond-outer {
+    width: 280px;
+    height: 280px;
+    margin-top: -140px;
+    margin-left: -140px;
+  }
+  .quadrant-label {
+    font-size: 8px;
+    max-width: 60px;
+    padding: 4px;
+  }
+  .summary-button-icon img {
+    width: 100px;
+  }
+  .ai-analysis-title, .ai-analysis-subtitle {
+    font-size: 12px;
+  }
+}

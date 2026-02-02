@@ -16,7 +16,7 @@ function TakeTest() {
 
   return (
     <div className="take-test-page">
-      <Header showStartAnalysis={true} />
+      <Header showStartAnalysis={true} showEnterCode={true} />
       <div className="diamond diamond-outer"></div>
       <div className="diamond diamond-middle"></div>
       <div className="diamond diamond-inner"></div>

@@ -53,3 +53,69 @@
   color: #1A1B1C;
   z-index: 100;
 }
+
+.enter-code-button {
+  position: absolute;
+  top: 16px;
+  right: 72px;
+  padding: 4px 12px;
+  background-color: #1A1B1C;
+  border: 1px solid #1A1B1C;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.enter-code-text {
+  font-family: 'Roobert TRIAL', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .top-left-text {
+    left: 16px;
+    font-size: 14px;
+  }
+  .skinstric-text {
+    margin-right: 8px;
+  }
+  .header-image {
+    right: 6px;
+    top: 6px;
+  }
+  .header-image img {
+    width: 40px;
+    height: 40px;
+  }
+  .start-analysis-text {
+    left: 16px;
+    font-size: 14px;
+    top: 72px;
+  }
+  .enter-code-button {
+    right: 16px;
+    padding: 6px 16px;
+  }
+  .enter-code-text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-left-text {
+    font-size: 12px;
+  }
+  .start-analysis-text {
+    font-size: 12px;
+    top: 64px;
+  }
+  .header-image img {
+    width: 32px;
+    height: 32px;
+  }
+}

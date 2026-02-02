@@ -72,3 +72,76 @@
   z-index: 10;
   white-space: nowrap;
 }
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .analysis-loading-page .diamond-inner {
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+  .analysis-loading-page .diamond-middle {
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+  }
+  .analysis-loading-page .diamond-outer {
+    width: 600px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
+  }
+  .preparing-text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .analysis-loading-page .diamond-inner {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .analysis-loading-page .diamond-middle {
+    width: 380px;
+    height: 380px;
+    margin-top: -190px;
+    margin-left: -190px;
+  }
+  .analysis-loading-page .diamond-outer {
+    width: 460px;
+    height: 460px;
+    margin-top: -230px;
+    margin-left: -230px;
+  }
+  .preparing-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .analysis-loading-page .diamond-inner {
+    width: 240px;
+    height: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+  }
+  .analysis-loading-page .diamond-middle {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .analysis-loading-page .diamond-outer {
+    width: 360px;
+    height: 360px;
+    margin-top: -180px;
+    margin-left: -180px;
+  }
+  .preparing-text {
+    font-size: 18px;
+  }
+}

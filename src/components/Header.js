@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-function Header({ showStartAnalysis = false, showAnalysis = false }) {
+function Header({ showStartAnalysis = false, showAnalysis = false, showEnterCode = false }) {
   return (
     <>
       <div className="top-left-text">
@@ -14,6 +14,11 @@ function Header({ showStartAnalysis = false, showAnalysis = false }) {
       {showStartAnalysis && (
         <div className="start-analysis-text">
           TO START ANALYSIS
+        </div>
+      )}
+      {showEnterCode && (
+        <div className="enter-code-button">
+          <span className="enter-code-text">ENTER CODE</span>
         </div>
       )}
     </>
