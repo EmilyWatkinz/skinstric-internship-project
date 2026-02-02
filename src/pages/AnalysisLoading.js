@@ -7,19 +7,16 @@ function AnalysisLoading() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if analysis results are ready and navigate
     const checkResults = setInterval(() => {
       const results = localStorage.getItem('analysisResults');
       if (results) {
         clearInterval(checkResults);
-        // Add a small delay for better UX
         setTimeout(() => {
           navigate('/analysis-results');
         }, 1500);
       }
     }, 500);
 
-    // Cleanup
     return () => clearInterval(checkResults);
   }, [navigate]);
 

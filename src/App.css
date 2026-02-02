@@ -194,7 +194,7 @@
   color: #1A1B1C;
 }
 
-/* Responsive Global Styles */
+
 @media (max-width: 1024px) {
   .App {
     padding: 0 16px;

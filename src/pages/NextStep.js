@@ -21,7 +21,6 @@ function NextStep() {
       setStream(mediaStream);
       setShowCamera(true);
       
-      // Wait for video element to be available
       setTimeout(() => {
         if (videoRef.current) {
           videoRef.current.srcObject = mediaStream;
@@ -43,16 +42,14 @@ function NextStep() {
       canvas.height = video.videoHeight;
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
       
-      // Convert to base64
+    
       const base64Image = canvas.toDataURL('image/jpeg');
       
-      // Stop camera stream
       if (stream) {
         stream.getTracks().forEach(track => track.stop());
       }
       setShowCamera(false);
       
-      // Upload the image
       uploadImage(base64Image);
     }
   };
@@ -81,10 +78,8 @@ function NextStep() {
     setIsUploading(true);
 
     try {
-      // Navigate to loading page immediately
       navigate('/analysis-loading');
       
-      // Send to API
       const response = await fetch('https://us-central1-api-skinstric-ai.cloudfunctions.net/skinstricPhaseTwo', {
         method: 'POST',
         headers: {
@@ -99,7 +94,6 @@ function NextStep() {
         const data = await response.json();
         console.log('Analysis results:', data);
         localStorage.setItem('analysisResults', JSON.stringify(data));
-        // TODO: Navigate to results page
       } else {
         console.error('Error:', response.statusText);
         alert('Failed to analyze image. Please try again.');

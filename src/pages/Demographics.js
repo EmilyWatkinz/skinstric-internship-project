@@ -16,7 +16,7 @@ function Demographics() {
       const parsed = JSON.parse(data);
       setDemographicsData(parsed.data);
       
-      // Set initial selections to highest scored values
+      
       if (parsed.data.race) {
         const topRace = Object.entries(parsed.data.race).sort((a, b) => b[1] - a[1])[0];
         setSelectedRace(topRace[0]);

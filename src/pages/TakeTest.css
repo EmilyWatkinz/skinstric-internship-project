@@ -263,7 +263,6 @@
   cursor: not-allowed;
 }
 
-/* Responsive Media Queries */
 @media (max-width: 1024px) {
   .diamond-inner {
     width: 400px;
