@@ -13,9 +13,11 @@ function AnalysisResults() {
   return (
     <div className="analysis-results-page">
       <Header showStartAnalysis={false} showAnalysis={true} />
-      <div className="diamond diamond-outer"></div>
-      <div className="diamond diamond-middle"></div>
-      <div className="diamond diamond-inner"></div>
+      <div className="diamonds-container">
+        <div className="diamond diamond-outer"></div>
+        <div className="diamond diamond-middle"></div>
+        <div className="diamond diamond-inner"></div>
+      </div>
       
       <div className="center-diamond">
         <div className="center-diamond-quadrant top-quadrant">

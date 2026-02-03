@@ -6,6 +6,15 @@
   overflow: hidden;
 }
 
+.diamonds-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 550px;
+}
+
 .analysis-results-page .diamond {
   position: absolute;
   transform: rotate(45deg);
@@ -180,6 +189,10 @@
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
+  .diamonds-container {
+    width: 440px;
+    height: 440px;
+  }
   .center-diamond {
     width: 240px;
     height: 240px;
@@ -211,6 +224,10 @@
 }
 
 @media (max-width: 768px) {
+  .diamonds-container {
+    width: 360px;
+    height: 360px;
+  }
   .center-diamond {
     width: 200px;
     height: 200px;
@@ -255,6 +272,10 @@
 }
 
 @media (max-width: 480px) {
+  .diamonds-container {
+    width: 280px;
+    height: 280px;
+  }
   .center-diamond {
     width: 160px;
     height: 160px;

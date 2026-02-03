@@ -45,10 +45,18 @@
   margin-top: 8px;
 }
 
-.demographics-boxes {
+.demographics-boxes-container {
   position: absolute;
   top: 240px;
-  left: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+
+.demographics-boxes {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -65,13 +73,35 @@
   align-items: center;
   justify-content: center;
   padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demographics-box:hover {
+  transform: scale(1.02);
 }
 
 .demographics-box.race-box {
-  background-color: #1A1B1C;
-  border-color: #1A1B1C;
+  background-color: #D8DADD;
+  border-color: #D8DADD;
   justify-content: space-between;
   align-items: flex-start;
+  border-top: 1px solid #1A1B1C;
+}
+
+.demographics-box.race-box.active {
+  background-color: #1A1B1C;
+  border-color: #1A1B1C;
+}
+
+.demographics-box.race-box .race-value,
+.demographics-box.race-box .race-label {
+  color: #1A1B1C;
+}
+
+.demographics-box.race-box.active .race-value,
+.demographics-box.race-box.active .race-label {
+  color: #ffffff;
 }
 
 .demographics-box.age-box {
@@ -82,12 +112,32 @@
   border-top: 1px solid #1A1B1C;
 }
 
+.demographics-box.age-box.active {
+  background-color: #1A1B1C;
+  border-color: #1A1B1C;
+}
+
+.demographics-box.age-box.active .age-value,
+.demographics-box.age-box.active .age-label {
+  color: #ffffff;
+}
+
 .demographics-box.gender-box {
   background-color: #ECECEC;
   border-color: #ECECEC;
   justify-content: space-between;
   align-items: flex-start;
   border-top: 1px solid #1A1B1C;
+}
+
+.demographics-box.gender-box.active {
+  background-color: #1A1B1C;
+  border-color: #1A1B1C;
+}
+
+.demographics-box.gender-box.active .gender-value,
+.demographics-box.gender-box.active .gender-label {
+  color: #ffffff;
 }
 
 .race-value {
@@ -183,15 +233,13 @@
 }
 
 .large-demographics-box {
-  position: absolute;
   width: 720px;
   height: 400px;
-  top: 240px;
-  left: 324px;
   background-color: #E8E9EA;
   border: 1px solid #E0E0E0;
   opacity: 1;
   padding: 24px;
+  position: relative;
 }
 .selected-race-display {
   font-family: 'Roobert TRIAL', sans-serif;
@@ -245,7 +293,7 @@
 
 .instruction-text {
   position: absolute;
-  top: 720px;
+  top: 660px;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Roobert TRIAL', sans-serif;
@@ -296,25 +344,23 @@
   background-color: #1A1B1C;
   border: 2px solid #1A1B1C;
   padding: 12px 32px;
-  cursor: not-allowed;
+  cursor: pointer;
   transition: transform 0.2s ease;
 }
 
 .confirm-button:hover {
-  transform: none;
+  transform: scale(1.05);
 }
 
 .right-demographics-box {
-  position: absolute;
   width: 340px;
   height: 400px;
-  top: 240px;
-  left: 1132px;
   background-color: #E8E9EA;
   border: 1px solid #E0E0E0;
   opacity: 1;
   padding: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 .box-title {
@@ -344,7 +390,8 @@
   flex-direction: column;
   gap: 6px;
   max-height: 320px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .prediction-item {
@@ -394,15 +441,13 @@
 
 /* Responsive Media Queries */
 @media (max-width: 1400px) {
-  .demographics-boxes {
-    left: 24px;
+  .demographics-boxes-container {
+    gap: 20px;
   }
   .large-demographics-box {
-    left: 220px;
     width: 600px;
   }
   .right-demographics-box {
-    left: 848px;
     width: 320px;
   }
   .circle-progress {
@@ -420,11 +465,11 @@
     font-size: 48px;
     line-height: 56px;
   }
+  .demographics-boxes-container {
+    gap: 16px;
+  }
   .large-demographics-box {
     width: 500px;
-  }
-  .right-demographics-box {
-    left: 748px;
   }
 }
 
@@ -437,21 +482,19 @@
     font-size: 36px;
     line-height: 44px;
   }
-  .demographics-boxes {
+  .demographics-boxes-container {
     top: 200px;
-    left: 16px;
+    gap: 16px;
   }
   .demographics-box {
     width: 140px;
     height: 80px;
   }
   .large-demographics-box {
-    left: 172px;
     width: 400px;
     height: 280px;
   }
   .right-demographics-box {
-    left: 596px;
     width: 280px;
     height: 280px;
   }
@@ -470,7 +513,7 @@
     font-size: 24px;
   }
   .instruction-text {
-    top: 520px;
+    top: 500px;
     font-size: 12px;
   }
   .action-buttons {
@@ -496,25 +539,26 @@
     line-height: 34px;
     margin-bottom: 20px;
   }
+  .demographics-boxes-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+  }
   .demographics-boxes {
     display: none;
   }
   .large-demographics-box {
-    position: relative;
-    left: auto;
-    top: auto;
     width: 100%;
     height: auto;
     min-height: 200px;
-    margin-bottom: 20px;
   }
   .right-demographics-box {
-    position: relative;
-    left: auto;
-    top: auto;
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
   }
   .circular-graph {
     position: relative;
@@ -539,6 +583,7 @@
     right: auto;
     bottom: auto;
     margin: 30px 0 40px 0;
+    padding: 0 16px;
   }
   .reset-button, .confirm-button {
     width: 100%;

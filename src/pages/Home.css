@@ -80,18 +80,18 @@
 }
 
 .triangle-left {
-  top: 179px;
+  top: 280px;
   left: -240px;
 }
 
 .triangle-right {
-  top: 179px;
+  top: 280px;
   right: -240px;
 }
 
 .take-test-button {
   position: absolute;
-  top: 410px;
+  top: 510px;
   right: 50px;
   opacity: 1;
   transform: rotate(0deg);
@@ -117,7 +117,7 @@
 
 .ai-button {
   position: absolute;
-  top: 410px;
+  top: 510px;
   left: 32px;
   opacity: 1;
   transform: rotate(0deg);
