@@ -6,12 +6,19 @@ import './TakeTest.css';
 function TakeTestLocation() {
   const [location, setLocation] = useState('');
   const [showProceedButton, setShowProceedButton] = useState(false);
+  const [showError, setShowError] = useState(false);
   const navigate = useNavigate();
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && location.trim() !== '') {
-      localStorage.setItem('userLocation', location);
-      setShowProceedButton(true);
+    if (e.key === 'Enter') {
+      if (location.trim() !== '' && /^[a-zA-Z\s]+$/.test(location.trim())) {
+        localStorage.setItem('userLocation', location);
+        setShowProceedButton(true);
+        setShowError(false);
+      } else {
+        setShowError(true);
+        setShowProceedButton(false);
+      }
     }
   };
 
@@ -24,10 +31,16 @@ function TakeTestLocation() {
       <div className="click-to-type-text">
         click to type
       </div>
+      {showError && (
+        <div className="error-message">Please enter a valid city name</div>
+      )}
       <input 
         type="text"
         value={location}
-        onChange={(e) => setLocation(e.target.value)}
+        onChange={(e) => {
+          setLocation(e.target.value);
+          setShowError(false);
+        }}
         onKeyPress={handleKeyPress}
         placeholder="your city name"
         className="introduce-yourself-text"

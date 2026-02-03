@@ -5,12 +5,18 @@ import './TakeTest.css';
 
 function TakeTest() {
   const [name, setName] = useState('');
+  const [showError, setShowError] = useState(false);
   const navigate = useNavigate();
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && name.trim() !== '') {
-      localStorage.setItem('userName', name);
-      navigate('/take-test-location');
+    if (e.key === 'Enter') {
+      if (name.trim() !== '' && /^[a-zA-Z\s]+$/.test(name.trim())) {
+        localStorage.setItem('userName', name);
+        setShowError(false);
+        navigate('/take-test-location');
+      } else {
+        setShowError(true);
+      }
     }
   };
 
@@ -23,10 +29,16 @@ function TakeTest() {
       <div className="click-to-type-text">
         click to type
       </div>
+      {showError && (
+        <div className="error-message">Please enter your name (letters only)</div>
+      )}
       <input 
         type="text"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => {
+          setName(e.target.value);
+          setShowError(false);
+        }}
         onKeyPress={handleKeyPress}
         placeholder="Introduce Yourself"
         className="introduce-yourself-text"
